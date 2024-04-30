@@ -31,7 +31,7 @@ public:
             this->imie = imie;
     }
     bool czyImieDamskie(void) {
-        if (this->imie[imie.length() - 1] == 'a') return true; else return false;
+        if (this->imie[imie.length()-1] == 'a') return true; else return false;
     }
 };
 
@@ -54,11 +54,13 @@ int main(int argc, char** argv) {
             listaImion.push_back(new Imie(imie));
             break;
         case 2:
-            for (int i = 0; i < listaImion.size() - 1; i++) {
+            for (int i = 0; i <= listaImion.size() - 1; i++) {
                 if (listaImion[i]->czyImieDamskie())
                     licznikImionDamskich++;
             }
-            std::cout << "Imion damskich jest:" << (float)licznikImionDamskich / listaImion.size() * 100;
+            std::cout << "Imion damskich jest:" << ((float) licznikImionDamskich / (float) (listaImion.size() * 100))*10000 <<"%"<< std::endl;
+                //(float)(licznikImionDamskich / listaImion.size() * 100);
+            licznikImionDamskich = 0;
             break;
         default:
             if (decyzja != 0) std::cout << "Nie ma takiej opcji\n";
