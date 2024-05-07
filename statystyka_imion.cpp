@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
                     licznikImionDamskich++;
             }
             std::cout << "Imion damskich jest:" << ((float) licznikImionDamskich / (float) (listaImion.size() * 100))*10000 <<"%"<< std::endl;
-                //(float)(licznikImionDamskich / listaImion.size() * 100);
+                
             licznikImionDamskich = 0;
             break;
         default:
